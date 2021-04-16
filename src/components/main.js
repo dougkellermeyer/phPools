@@ -3,6 +3,7 @@ import BackgroundImage from "gatsby-background-image"
 import { useStaticQuery, graphql } from "gatsby"
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import ContactForm from './contactForm'
 
 const withStyles = makeStyles(() => ({
     mainRoot: {
@@ -90,7 +91,7 @@ const Main = () => {
                 </div>
             </div>
             <div id="contactForm">
-
+                <ContactForm/>
             </div>
         </div>
     )
