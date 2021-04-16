@@ -19,6 +19,16 @@ const withStyles = makeStyles(() => ({
     },
     mainContent: {
       flexGrow: 1
+    },
+    footerRoot:{
+      background: "#001841",
+      color: "white",
+      display: "flex",
+      justifyContent: "space-between",
+      height: "50px"
+    },
+    copyrightText: {
+      margin: "auto"
     }
 })) 
 
@@ -39,12 +49,8 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className={classes.layoutRoot}>
         <main className={classes.mainContent}>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          <p> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
+        <footer className={classes.footerRoot}>
+          <p className={classes.copyrightText}> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
         </footer>
       </div>
     </>
