@@ -90,7 +90,7 @@ const ContactForm = (props) => {
         data-netlify-recaptcha="true"
         action="/thank-you"
         >
-        <input type="hidden" name="form-name" value="Contact Form PH Pools" />
+        <input type="hidden" name="form-name" value="Contact Form" />
 
           <Typography className={classes.formHeader}>Contact Us</Typography>
 
@@ -103,7 +103,7 @@ const ContactForm = (props) => {
           <textarea name="message" />
         </div>
         <div className={classes.captchaWrapper}>
-          <ReCAPTCHA sitekey="6Le2xqwaAAAAAIIYnSh04me11jxlWXvz2ITqWoU0" />
+          <ReCAPTCHA sitekey="6Le2xqwaAAAAAIIYnSh04me11jxlWXvz2ITqWoU0"/>
         </div>
         <div className={classes.submitButtonWrapper}>
           <button className={classes.submitButton} type="submit">Send</button>
