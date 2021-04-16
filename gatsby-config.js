@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `PH Pool & Spa Service`,
+    description: `PH Pool & Spa Service has been serving the Rochester, New York and surrounding areas since 1989.`,
+    author: `Doug Kellermeyer`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

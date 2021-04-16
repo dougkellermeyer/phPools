@@ -1,29 +1,49 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-
+import Main from "../components/main"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BackgroundImage from "gatsby-background-image"
+import { useStaticQuery, graphql } from "gatsby"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+
+  const {mobileImage, desktopImage} = useStaticQuery(graphql`
+  query {
+    desktopImage: file(relativePath: { eq: "swimming-pool-banner.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    mobileImage: file(relativePath: { eq: "swimming-pool-banner.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 650) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`)
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 650px)`
+    }
+  ]
+
+  return (
+    <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
+    <Main/>
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </p>
   </Layout>
-)
+  )
+}
 
 export default IndexPage
