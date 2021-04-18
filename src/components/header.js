@@ -4,26 +4,36 @@ import { Link } from "gatsby"
 import {makeStyles} from '@material-ui/core'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import Button from '@material-ui/core/Button'
+import logoBlack from '../images/default-monochrome-black.svg'
 
 
 const withStyles = makeStyles( () => ({
   navBarRoot: {
       position: "fixed",
       display: "flex",
-      background: "#001841",
+      background: "white",
       justifyContent: "space-between",
       width: "100%",
       top: 0,
       boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
-      zIndex: "1"
+      zIndex: "1",
+      opacity: "0.85"
   },
   navBarTitle:{
     maxWidth: 960,
     padding: `1.45rem 1.0875rem`,
   },
   navButton: {
-    color: "white",
+    color: "#001841",
     textTransform: "none"
+  },
+  navBarButtonWrapper: {
+    display: "flex"
+  },
+  navLogo: {
+    display: "flex",
+    width: "250px",
+    margin: "auto"
   }
 }))
 
@@ -36,13 +46,11 @@ const Header = ({ siteTitle }) => {
       className={classes.navBarRoot}
     >
       <div className={classes.navBarTitle}>
-        <h1 style={{ margin: 0 }}>
-          <Link to="/" style={{color: `white`,textDecoration: `none`}}>
-            {siteTitle}
+          <Link to="/" style={{color: '#001841',textDecoration: `none`}}>
+            <img className={classes.navLogo} src={logoBlack} alt="ph pool logo black"/>
           </Link>
-        </h1>
       </div>
-      <div>
+      <div className={classes.navBarButtonWrapper}>
             <Button 
               className={classes.navButton}
               onClick={() => scrollTo('#about')}
