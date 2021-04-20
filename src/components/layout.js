@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import {makeStyles} from "@material-ui/core/styles"
 import Header from "./header"
+import Typography from '@material-ui/core/Typography'
 import "./layout.css"
 
 const withStyles = makeStyles(() => ({
@@ -11,17 +12,44 @@ const withStyles = makeStyles(() => ({
       flexDirection: "column"
     },
     mainContent: {
-      flexGrow: 1
+      flexGrow: 1,
+      minHeight: "100vh"
     },
     footerRoot:{
       background: "#001841",
       color: "white",
       display: "flex",
-      justifyContent: "space-between",
-      height: "50px"
+      minHeight: "50px"
+    },
+    footerContent: {
+      display: "flex",
+      width: "100%",
+      justifyContent: "space-evenly",
+      "@media(max-width: 600px)":{
+        flexDirection: "column"
+      }
     },
     copyrightText: {
-      margin: "auto"
+      marginTop: "auto",
+      marginBottom: "auto",
+      "@media(max-width: 600px)":{
+        textAlign: "center"
+      }
+    },
+    footerPhone:{
+      marginTop: "auto",
+      marginBottom: "auto",
+      color: "white",
+      "@media(max-width: 600px)":{
+        textAlign: "center"
+      }
+    },
+    footerAddress:{
+      marginTop: "auto",
+      marginBottom: "auto",
+      "@media(max-width: 600px)":{
+        textAlign: "center"
+      }
     },
     list: {
       width: "200px"
@@ -47,7 +75,11 @@ const Layout = ({ children }) => {
       <div className={classes.layoutRoot}>
         <main className={classes.mainContent}>{children}</main>
         <footer className={classes.footerRoot}>
-          <p className={classes.copyrightText}> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
+          <div className={classes.footerContent}>
+            <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a>
+            {/* <Typography className={classes.footerAddress}>7880 Martin Rd. Honeoye Falls, NY 14472</Typography> */}
+            <p className={classes.copyrightText}> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
+          </div>
         </footer>
       </div>
     </>

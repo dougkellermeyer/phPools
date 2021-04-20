@@ -24,10 +24,7 @@ import Divider from '@material-ui/core/Divider'
 const withStyles = makeStyles(() => ({
     mainRoot: {
         display: "flex",
-        flexDirection: "column",
-        "@media(max-width: 650px)":{
-            height: "calc(100vh - calc(100vh -100%))",
-        }
+        flexDirection: "column"
     },
     landingWrapper: {
         display: "flex",
@@ -355,7 +352,6 @@ const Main = () => {
                     <img className={classes.aboutImage} src={riverPhoto} alt="photo of a river"/>
                 </div>
             {/* </BackgroundImage> */}
-
             <div id="contactForm">
                 <ContactForm/>
             </div>

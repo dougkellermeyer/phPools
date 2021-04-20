@@ -41,19 +41,21 @@ const withStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         flexDirection: "column",
         margin: "10px",
+        fontFamily: "Raleway, sans-serif"
       },
       formTextarea: {
         display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
         margin: "10px",
-        marginBottom: "20px"
+        marginBottom: "20px",
+        fontFamily: "Raleway, sans-serif"
       },
       submitButton: {
         margin:"20px",
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: "#001841",
         color: theme.palette.background.paper,
-        borderColor: theme.palette.primary.main,
+        borderColor: "#001841",
         borderRadius: "35px",
         padding:"15px",
         paddingLeft: "25px",
@@ -63,8 +65,9 @@ const withStyles = makeStyles((theme) => ({
         width: "190px",
         fontWeight: "bold",
         '&:hover': {
-          backgroundColor: theme.palette.action.hover,
+          backgroundColor: "#001841",
           boxShadow: 'none',
+          cursor: "pointer"
         },
       },
       submitButtonWrapper: {
@@ -73,6 +76,11 @@ const withStyles = makeStyles((theme) => ({
       },
       captchaWrapper: {
         margin: "10px"
+      },
+      footerPhone: {
+          color: "black",
+          textDecoration: "none",
+          fontFamily: "Raleway, sans-serif"
       }
 
 }));
@@ -91,8 +99,10 @@ const ContactForm = (props) => {
         action="/thank-you"
         >
         <input type="hidden" name="form-name" value="contactPh" />
-
           <Typography className={classes.formHeader}>Get in Touch</Typography>
+            <div style={{textAlign: "center"}}>
+                <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a>
+            </div>
 
         <div className={classes.formEmail}>
           <label>Your Email:</label>
