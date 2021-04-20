@@ -92,7 +92,7 @@ const ContactForm = (props) => {
         >
         <input type="hidden" name="form-name" value="contactPh" />
 
-          <Typography className={classes.formHeader}>Contact Us</Typography>
+          <Typography className={classes.formHeader}>Get in Touch</Typography>
 
         <div className={classes.formEmail}>
           <label>Your Email:</label>
