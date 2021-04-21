@@ -16,7 +16,7 @@ const withStyles = makeStyles(() => ({
       minHeight: "100vh"
     },
     footerRoot:{
-      background: "#001841",
+      background: "#333333",
       color: "white",
       display: "flex",
       minHeight: "50px"
@@ -76,8 +76,7 @@ const Layout = ({ children }) => {
         <main className={classes.mainContent}>{children}</main>
         <footer className={classes.footerRoot}>
           <div className={classes.footerContent}>
-            <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a>
-            {/* <Typography className={classes.footerAddress}>7880 Martin Rd. Honeoye Falls, NY 14472</Typography> */}
+            {/* <a href="tel:(585) 624-9870" className={classes.footerPhone}>(585) 624-9870</a> */}
             <p className={classes.copyrightText}> © {new Date().getFullYear()}, PH Pool & Spa Service</p>
           </div>
         </footer>
