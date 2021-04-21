@@ -16,8 +16,8 @@ const withStyles = makeStyles(() => ({
       minHeight: "100vh"
     },
     footerRoot:{
-      background: "#333333",
-      color: "white",
+      background: "#b8d1ed",
+      color: "black",
       display: "flex",
       minHeight: "50px"
     },

@@ -35,7 +35,8 @@ const withStyles = makeStyles(() => ({
     },
     landingWrapper: {
         display: "flex",
-        minHeight: "100vh",
+        // minHeight: "100vh",
+        minHeight: "55vh",
         flexDirection: "column",
         margin: "auto"
 
@@ -111,7 +112,7 @@ const withStyles = makeStyles(() => ({
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
         fontSize: "2rem",
-        color: "#001841",
+        color: "white",
         padding: "10px",
     },
     landingMessageWrapper: {
@@ -123,12 +124,23 @@ const withStyles = makeStyles(() => ({
         marginRight: "0px",
         height: "150px"
     },
-    landingMessageText: {
-        color: "white",
-        background: "#2460A7FF",
+    landingPageHeader: {
+        color: "black",
+        // background: "#3587de",
         marginLeft: "0px",
         marginRight: "0px",
         fontSize: "3.0em",
+        fontWeight: "100",
+        fontFamily: "Raleway, sans-serif",
+        textAlign: "center",
+        margin: "auto"
+    },
+    landingPageSubHeader: {
+        color: "black",
+        // background: "#3587de",
+        marginLeft: "0px",
+        marginRight: "0px",
+        fontSize: "2em",
         fontWeight: "100",
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
@@ -139,10 +151,10 @@ const withStyles = makeStyles(() => ({
         margin: "auto",
         marginTop: "1.5em",
         marginBottom: "1.5em",
-        background: "#001841"
+        background: "white"
     },
     serviceSummary: {
-        color: "#001841",
+        color: "white",
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
         marginBottom: "2em"
@@ -152,7 +164,7 @@ const withStyles = makeStyles(() => ({
     },
     scrollToAbout: {
         height: "80px", 
-        background: "#85B3D1FF"
+        background: "#3587de"
     },
     servicesListWrapper: {
         display: "flex",
@@ -164,7 +176,7 @@ const withStyles = makeStyles(() => ({
         width: "calc(33.33333% - 2.5em)",
         height: "400px",
         boxShadow: "none",
-        backgroundColor: "#2460A7FF",
+        backgroundColor: "#1563b2",
         "@media(max-width: 980px)":{
             width: "calc(50% - 2.5em)"
         },
@@ -177,7 +189,7 @@ const withStyles = makeStyles(() => ({
         width: "calc(33.33333% - 2.5em)",
         height: "400px",
         boxShadow: "none",
-        backgroundColor: "#2460A7FF",
+        backgroundColor: "#1563b2",
         "@media(max-width: 980px)":{
             width: "calc(50% - 2.5em)"
         },
@@ -215,7 +227,8 @@ const withStyles = makeStyles(() => ({
     contactHeader: {
         fontSize: "2.0rem",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        color: "#333333"
     },
     phoneEmailWrapper: {
         display: "flex",
@@ -350,30 +363,32 @@ const Main = () => {
 
     return (
         <div className={classes.mainRoot}>
-            <BackgroundImage
+            {/* <BackgroundImage
                 fluid={sources[0]} 
                 className={classes.bannerImage} 
-                style={{
-                    // backgroundPositionY: '90px',
-                }}
-                
-            >
-                <div className={classes.landingWrapper}>
-                    <div className={classes.landingMessageWrapper}>
-                        <Typography className={classes.landingMessageText}>Rochester's Top Choice in Pools & Spa</Typography>
+            > */}
+            <section class="py-5 section-bubble1">
+                <div class="container">
+                    <div className={classes.landingWrapper}>
+                        <div className={classes.landingMessageWrapper}>
+                            <Typography className={classes.landingPageHeader}>PH Pools & Spa Service</Typography>
+                            <Typography className={classes.landingPageSubHeader}>Rochester's Top Choice in Pools & Spa</Typography>
+                            {/* <Typography style={{textAlign: "center"}}>Over 30 years of experience</Typography> */}
+                        </div>
                     </div>
                 </div>
-            </BackgroundImage>
+            </section>
             
-            <span style={{marginBottom: "80px"}} id="services"></span>
-            <section class="py-5 section-bubble1">
+            {/* </BackgroundImage> */}
+            
+            <span style={{paddingBottom: "80px", backgroundColor: "#1563b2"}} id="services"></span>
+            <section class="py-5 section-bubble2">
                     <div class="container">
                     <Typography className={classes.someOfWorkHeader}>Custom Renovations, Repairs, and Service</Typography>
                     <Divider className={classes.serviceDivider}/>
                     <Typography className={classes.serviceSummary}>From basic maintenance to complete pool renovations, we have you covered.</Typography>
                     </div>
-            </section>
-            <section class="py-5 section-bubble2">
+    
                     <div class="container">
                     <div className={classes.serviceWrapper}>   
                         <div className={classes.servicesListWrapper}>
