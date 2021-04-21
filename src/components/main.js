@@ -125,7 +125,7 @@ const withStyles = makeStyles(() => ({
     },
     landingMessageText: {
         color: "white",
-        background: "#1c6cc2",
+        background: "#2460A7FF",
         marginLeft: "0px",
         marginRight: "0px",
         fontSize: "3.0em",
@@ -152,7 +152,7 @@ const withStyles = makeStyles(() => ({
     },
     scrollToAbout: {
         height: "80px", 
-        background: "#384364"
+        background: "#85B3D1FF"
     },
     servicesListWrapper: {
         display: "flex",
@@ -164,7 +164,7 @@ const withStyles = makeStyles(() => ({
         width: "calc(33.33333% - 2.5em)",
         height: "400px",
         boxShadow: "none",
-        backgroundColor: "#ffd2b0",
+        backgroundColor: "#2460A7FF",
         "@media(max-width: 980px)":{
             width: "calc(50% - 2.5em)"
         },
@@ -177,7 +177,7 @@ const withStyles = makeStyles(() => ({
         width: "calc(33.33333% - 2.5em)",
         height: "400px",
         boxShadow: "none",
-        backgroundColor: "#ffd2b0",
+        backgroundColor: "#2460A7FF",
         "@media(max-width: 980px)":{
             width: "calc(50% - 2.5em)"
         },
@@ -232,9 +232,9 @@ const withStyles = makeStyles(() => ({
     },
     contactButton: {
         margin:"20px",
-        backgroundColor: "#001841",
+        backgroundColor: "#333333",
         color: "white",
-        borderColor: "#001841",
+        borderColor: "#333333",
         borderRadius: "35px",
         padding:"15px",
         paddingLeft: "25px",
@@ -293,7 +293,8 @@ const withStyles = makeStyles(() => ({
         justifyContent: "center"
     },
     phBizCardImage: {
-        maxWidth: "300px"
+        maxWidth: "300px",
+        maxHeight: "200px"
     }
 }))
 
