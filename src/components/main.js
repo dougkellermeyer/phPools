@@ -174,11 +174,12 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        maxWidth: "1200px",
+        margin: "auto"
     },
     servicesCard: {
         width: "calc(50% - 2.5em)",
-        maxWidth: "500px",
         height: "400px",
         boxShadow: "none",
         backgroundColor: "#1563b2",
