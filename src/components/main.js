@@ -201,9 +201,9 @@ const withStyles = makeStyles(() => ({
             width: "100%",
             margin: "1.25em 0 0 0"
         },
-        // "@media(max-width: 600px)":{
-        //     display: "none"
-        // }
+        "@media(max-width: 600px)":{
+            height: "100px"
+        }
     },
     servicesCardContent: {
         position: "relative",
