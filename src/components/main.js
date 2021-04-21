@@ -177,32 +177,24 @@ const withStyles = makeStyles(() => ({
         justifyContent: "center"
     },
     servicesCard: {
-        width: "calc(33.33333% - 2.5em)",
+        width: "calc(50% - 2.5em)",
+        maxWidth: "500px",
         height: "400px",
         boxShadow: "none",
         backgroundColor: "#1563b2",
-        "@media(max-width: 980px)":{
-            width: "calc(50% - 2.5em)"
-        },
         "@media(max-width: 736px)":{
             width: "100%",
             margin: "1.25em 0 0 0"
         }
     },
     servicesCardLast: {
-        width: "calc(33.33333% - 2.5em)",
-        height: "400px",
-        boxShadow: "none",
-        backgroundColor: "#1563b2",
-        "@media(max-width: 980px)":{
-            width: "calc(50% - 2.5em)"
-        },
-        "@media(max-width: 736px)":{
-            width: "100%",
-            margin: "1.25em 0 0 0"
-        },
+        display: "none",
         "@media(max-width: 600px)":{
-            height: "100px"
+            display: "flex",
+            height: "100px",
+            color: "transparent",
+            backgroundColor: "transparent",
+            boxShadow: "none"
         }
     },
     servicesCardContent: {
