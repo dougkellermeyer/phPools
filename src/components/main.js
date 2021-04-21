@@ -36,7 +36,7 @@ const withStyles = makeStyles(() => ({
     landingWrapper: {
         display: "flex",
         // minHeight: "100vh",
-        minHeight: "55vh",
+        minHeight: "65vh",
         flexDirection: "column",
         margin: "auto"
 
@@ -119,10 +119,14 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         flexDirection: "column",
         margin: "auto",
+        marginTop: "15%",
         opacity: "0.85",
         marginLeft: "0px",
         marginRight: "0px",
-        height: "150px"
+        height: "150px",
+        "@media(max-width:650px)":{
+            marginTop: "auto"
+        }
     },
     landingPageHeader: {
         color: "black",
