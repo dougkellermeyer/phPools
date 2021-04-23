@@ -91,6 +91,7 @@ const withStyles = makeStyles(() => ({
     },
     aboutImage: {
         width: "50%",
+        maxHeight: "400px",
         "@media(max-width: 600px)":{
             width: "100%"
         }
@@ -368,7 +369,7 @@ const Main = () => {
                 <div class="container">
                     <div className={classes.landingWrapper}>
                         <div className={classes.landingMessageWrapper}>
-                            <Typography className={classes.landingPageHeader}>PH Pools & Spa Service</Typography>
+                            <Typography className={classes.landingPageHeader}>PH Pool & Spa Service</Typography>
                             <Typography className={classes.landingPageSubHeader}>Rochester's Top Choice in Pools & Spa</Typography>
                             {/* <Typography style={{textAlign: "center"}}>Over 30 years of experience</Typography> */}
                         </div>
@@ -457,7 +458,7 @@ const Main = () => {
                             <div className={classes.aboutSectionWrapper}>
                                 <Typography className={classes.aboutTitleHeader}>About Us</Typography>
                                 <div className={classes.aboutTextWrapper}>
-                                    <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester, New York and surrounding areas since 1989.</p>
+                                    <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester area since 1989.</p>
                                     <p className={classes.aboutText}>We specialize in liner replacement for inground pools, but also offer service, renovation and repair for inground pools and spas of all types and sizes.</p>
                                     <p className={classes.aboutText}>Our highly trained and experienced staff members strive to deliver the highest quality work.</p>
                                     <p className={classes.aboutText}>Call the proven professionals today! We’ll leave you wondering why you didn’t call sooner.</p>
