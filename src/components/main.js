@@ -23,10 +23,12 @@ import poolSafety from '../images/pool_safety2.jpg'
 import riverPhoto from '../images/deckCreek.jpg'
 import imageBlurOverlay from '../images/overlay1.png'
 import poolWaterfall from '../images/swimming-pool-banner_cropped.jpg'
+import fiveStar from '../images/fiveStar.png'
 import Divider from '@material-ui/core/Divider'
 import PhoneIcon from '@material-ui/icons/Phone'
 import EmailIcon from '@material-ui/icons/Email'
 import Avatar from '@material-ui/core/Avatar'
+import StarRateIcon from '@material-ui/icons/StarRate';
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
@@ -79,7 +81,8 @@ const withStyles = makeStyles(() => ({
     aboutTitleHeader: {
         textAlign: "center",
         fontSize: "2rem",
-        color: "black"
+        fontWeight: "bold",
+        color: "white"
     },
     aboutTextWrapper: {
         display:"flex",
@@ -115,6 +118,7 @@ const withStyles = makeStyles(() => ({
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
         fontSize: "2rem",
+        fontWeight: "bold",
         color: "white",
         padding: "10px",
     },
@@ -273,6 +277,31 @@ const withStyles = makeStyles(() => ({
     emailA: {
         marginBottom: "20px",
         textDecoration: "none"
+    },
+    reviewsWrapper: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "auto",
+        textAlign: "center",
+        alignItems: "center",
+    },
+    reviewButton: {
+        backgroundColor: "#b8d1ed",
+        borderRadius: "25px",
+        padding: "15px"
+    },
+    reviewHeader: {
+        fontSize: "1.5rem",
+        color: "#333333",
+        fontWeight: "bold",
+        textTransform: "none"
+    },
+    reviewStarWrapper: {
+        display: "flex",
+        flexDirection: "column"
+    },
+    reviewLink: {   
+        color: "yellow"
     },
     phoneIcon: {
         marginRight: "10px"
@@ -530,6 +559,16 @@ const Main = () => {
                                     phpoolandspas@gmail.com
                                 </Button>
                             </a>
+                        </div>
+                        <div className={classes.reviewsWrapper}>
+                            <Button className={classes.reviewButton}>
+                                <div className={classes.reviewStarWrapper}>
+                                    <Typography className={classes.reviewHeader}>Leave Us a Review</Typography>
+                                        <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
+                                                <StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/>
+                                        </a>
+                                </div>
+                            </Button> 
                         </div>
                     </div>
                 </div>
