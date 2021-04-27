@@ -13,13 +13,14 @@ import liner3 from '../images/liner_drone.jpg'
 import liner4 from '../images/ph_liner_2_river.jpeg'
 import liner5 from '../images/liner_install_1.jpeg'
 import liner6 from '../images/liner6.jpeg'
-import bbbLogo from '../images/bbb_logo.png'
+import linerFlower from '../images/liner_flower.jpg'
+import bbbLogo from '../images/bbb_logo_a_rating_2.png'
 import poolVacuum from '../images/pool_cleaning.jpg'
 import poolPump from '../images/pool_pump.jpg'
-import poolBall from '../images/pool_ball.jpg'
+import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
 import phBizCard from '../images/phBizCard.jpeg'
 import poolSafety from '../images/pool_safety2.jpg'
-import riverPhoto from '../images/ph_river_large.jpeg'
+import riverPhoto from '../images/deckCreek.jpg'
 import imageBlurOverlay from '../images/overlay1.png'
 import poolWaterfall from '../images/swimming-pool-banner_cropped.jpg'
 import Divider from '@material-ui/core/Divider'
@@ -91,7 +92,8 @@ const withStyles = makeStyles(() => ({
     },
     aboutImage: {
         width: "50%",
-        maxHeight: "400px",
+        maxHeight: "500px",
+        maxWidth: "500px",
         "@media(max-width: 600px)":{
             width: "100%"
         }
@@ -163,6 +165,13 @@ const withStyles = makeStyles(() => ({
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
         marginBottom: "2em"
+    },
+    servicesBulletsWrapper: {
+        display: "flex",
+        justifyContent: "center",
+        color: "white",
+        fontFamily: "Raleway, sans-serif",
+        margin: "20px"
     },
     serviceWrapper: {
         paddingTop: "2.5em"
@@ -261,7 +270,8 @@ const withStyles = makeStyles(() => ({
         },
     },
     emailA: {
-        marginBottom: "20px"
+        marginBottom: "20px",
+        textDecoration: "none"
     },
     phoneIcon: {
         marginRight: "10px"
@@ -279,17 +289,19 @@ const withStyles = makeStyles(() => ({
     },
     bbbImage: {
         marginBottom: "10px",
+        marginRight: "10px",
         maxWidth: "300px",
+        maxHeight: "150px",
+        borderRadius: "15px"
     },
     bbbYearsCircle: {
         width: "90px",
         height: "90px",
-        backgroundColor: "#006495",
+        backgroundColor: "#2b91b2",
         padding: "10px",
         marginTop: "30px",
         "@media(max-width: 600px)":{
             margin: "auto",
-            marginTop: "-20px",
             marginBottom: "40px"
         }
     },
@@ -382,9 +394,22 @@ const Main = () => {
             <span style={{paddingBottom: "80px", backgroundColor: "#1563b2"}} id="services"></span>
             <section class="py-5 section-bubble2">
                     <div class="container">
-                    <Typography className={classes.someOfWorkHeader}>Custom Renovations, Repairs, and Service</Typography>
-                    <Divider className={classes.serviceDivider}/>
-                    <Typography className={classes.serviceSummary}>From basic maintenance to complete pool renovations, we have you covered.</Typography>
+                        <Typography className={classes.someOfWorkHeader}>Custom Renovations, Repairs, and Service</Typography>
+                        <Divider className={classes.serviceDivider}/>
+                        <Typography className={classes.serviceSummary}>From basic maintenance to complete pool renovations, we have you covered.</Typography>
+                        <div className={classes.servicesBulletsWrapper}>
+                            <ul>
+                                <li>Inground Pool Liner Replacements</li>
+                                <li>Safety Cover Installations</li>
+                                <li>Open and Close Inground Pools</li>
+                                <li>Pool and Spa Equipment Sales and Service</li>
+                            </ul>
+                            <ul>
+                                <li>Leak Detection and Underground Plumbing</li>
+                                <li>Paint Gunite Pools</li>
+                                <li>Major Swimming Pool Renovations</li>
+                            </ul>
+                        </div>
                     </div>
     
                     <div class="container">
@@ -398,45 +423,52 @@ const Main = () => {
                             </Card>
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner6} alt="pool liner"/>
-                                    <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography>
-                                </CardContent>
-                            </Card>
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={poolBall} alt="pool with vacuum"/>
-                                    <Typography className={classes.servicesCardText}>Pool Equipment Service, Sales, and Installation</Typography>
+                                    <img className={classes.servicesCardImage} src={liner2} alt="child swimming"/>
+                                    <Typography className={classes.servicesCardText}>Pool Inspections</Typography>
                                 </CardContent>
                             </Card>  
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner1} alt="pool liner install"/>
+                                    <img className={classes.servicesCardImage} src={liner6} alt="pool liner"/>
+                                    <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography>
+                                </CardContent>
+                            </Card>  
+                            <Card className={classes.servicesCard}>
+                                <CardContent className={classes.servicesCardContent}>
+                                    <img className={classes.servicesCardImage} src={linerFlower} alt="pool liner"/>
                                     <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography>
                                 </CardContent>
                             </Card>  
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner5} alt="pool liner install"/>
+                                    <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography>
                                 </CardContent>
                             </Card> 
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
+                                    <img className={classes.servicesCardImage} src={liner1} alt="pool liner install"/>
+                                    <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography>
+                                </CardContent>
+                            </Card>  
+                            <Card className={classes.servicesCard}>
+                                <CardContent className={classes.servicesCardContent}>
+                                    <img className={classes.servicesCardImage} src={poolEquipmentSales} alt="pool with vacuum"/>
+                                    <Typography className={classes.servicesCardText}>Pool Equipment Service, Sales, and Installation</Typography>
+                                </CardContent>
+                            </Card>  
+                            {/* <Card className={classes.servicesCard}>
+                                <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={poolPump} alt="pool pump"/>
                                     <Typography className={classes.servicesCardText}>Pump Installation/Maintenance</Typography>
                                 </CardContent>
-                            </Card> 
+                            </Card>  */}
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner3} alt="pool cover"/>
                                     <Typography className={classes.servicesCardText}>Safety Covers</Typography>
                                 </CardContent>
                             </Card> 
-                            <Card className={classes.servicesCard}>
-                                <CardContent className={classes.servicesCardContent}>
-                                    <img className={classes.servicesCardImage} src={liner2} alt="child swimming"/>
-                                    <Typography className={classes.servicesCardText}>Pool Inspections</Typography>
-                                </CardContent>
-                            </Card>    
                             <Card className={classes.servicesCardLast}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <Typography className={classes.servicesCardText}></Typography>
@@ -461,11 +493,11 @@ const Main = () => {
                                     <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester area since 1989.</p>
                                     <p className={classes.aboutText}>We specialize in liner replacement for inground pools, but also offer service, renovation and repair for inground pools and spas of all types and sizes.</p>
                                     <p className={classes.aboutText}>Our highly trained and experienced staff members strive to deliver the highest quality work.</p>
-                                    <p className={classes.aboutText}>Call the proven professionals today! We’ll leave you wondering why you didn’t call sooner.</p>
+                                    <p className={classes.aboutText}>Call the proven professionals today...we’ll leave you wondering why you didn’t call sooner.</p>
                                 </div>
-                                <div className={classes.phBizCardWrapper}>
+                                {/* <div className={classes.phBizCardWrapper}>
                                     <img className={classes.phBizCardImage} src={phBizCard} alt="buisness card" />
-                                </div>
+                                </div> */}
 
                                 <div className={classes.bbbWrapper}>
                                     <img className={classes.bbbImage} src={bbbLogo} alt="better business bureau logo" />
@@ -483,7 +515,7 @@ const Main = () => {
             <section class="py-5 section-bubble4">
                 <div class="container">
                     <div id="contactForm">
-                        <Typography className={classes.contactHeader}>We Hope to Hear from You</Typography>
+                        <Typography className={classes.contactHeader}>Contact Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(585) 624-9870" className={classes.contactPhone}>
                                 <Button className={classes.contactButton}>
