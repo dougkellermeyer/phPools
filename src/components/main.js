@@ -164,7 +164,8 @@ const withStyles = makeStyles(() => ({
         color: "white",
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
-        marginBottom: "2em"
+        marginBottom: "2em",
+        fontSize: "1.25rem"
     },
     servicesBulletsWrapper: {
         display: "flex",
