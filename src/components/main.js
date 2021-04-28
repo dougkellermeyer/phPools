@@ -620,7 +620,7 @@ const Main = () => {
                                 <div className={classes.reviewStarWrapper}>
                                     <Typography className={classes.reviewHeader}>We'd Love to Hear From You</Typography>
                                     <Typography className={classes.reviewClickText}>Click here to leave us a review</Typography>
-                                        <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
+                                        <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc">
                                                 <FiveStar/>
                                         </a>
                                 </div>
