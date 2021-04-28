@@ -311,12 +311,15 @@ const withStyles = makeStyles(() => ({
     reviewButton: {
         backgroundColor: "#b8d1ed",
         borderRadius: "25px",
-        padding: "15px"
+        padding: "20px"
     },
     reviewHeader: {
-        fontSize: "1.5rem",
+        fontSize: "1.2rem",
         color: "#333333",
         fontWeight: "bold",
+        textTransform: "none"
+    },
+    reviewClickText: {
         textTransform: "none"
     },
     reviewStarWrapper: {
@@ -325,6 +328,28 @@ const withStyles = makeStyles(() => ({
     },
     reviewLink: {   
         color: "yellow"
+    },
+    reviewCard: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor:"#white",
+        width: "250px",
+        minHeight: "100px",
+        margin: "10px",
+        padding: "10px"
+    },
+    reviewCardText: {
+        fontSize: "0.75rem"
+    },
+    reviewCardsWrapper: {
+        display: "flex",
+        flexWrap: "wrap",
+        marginLeft: "15%",
+        "@media(max-width: 600px)":{
+            justifyContent: "center",
+            marginLeft: "unset"
+        }
     },
     phoneIcon: {
         marginRight: "10px"
@@ -371,6 +396,9 @@ const withStyles = makeStyles(() => ({
     phBizCardImage: {
         maxWidth: "300px",
         maxHeight: "200px"
+    },
+    fiveStar: {
+        color: "#f5b81c"
     }
 }))
 
@@ -423,13 +451,17 @@ const Main = () => {
     }
   ]
 
+  const FiveStar = () => {
+      return (
+        <div className={classes.fiveStar}>
+            <StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/>
+        </div>
+      )
+  }
+
 
     return (
         <div className={classes.mainRoot}>
-            {/* <BackgroundImage
-                fluid={sources[0]} 
-                className={classes.bannerImage} 
-            > */}
             <section class="py-5 section-bubble1">
                 <div class="container">
                     <div className={classes.landingWrapper}>
@@ -442,9 +474,7 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-            
-            {/* </BackgroundImage> */}
-            
+                    
             <span style={{paddingBottom: "80px", backgroundColor: "#1563b2"}} id="services"></span>
             <section class="py-5 section-bubble2">
                     <div class="container">
@@ -472,7 +502,7 @@ const Main = () => {
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner4} alt="pool with cover"/>
-                                    <Typography className={classes.servicesCardText}>Pool Opening & Closing</Typography>
+                                    <Typography className={classes.servicesCardText}>Pool Openings & Closings</Typography>
                                 </CardContent>
                             </Card>
                             <Card className={classes.servicesCard}>
@@ -496,7 +526,7 @@ const Main = () => {
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner5} alt="pool liner install"/>
-                                    <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography>
+                                    <Typography className={classes.servicesCardText}>Major Pool Renovations</Typography>
                                 </CardContent>
                             </Card> 
                             <Card className={classes.servicesCard}>
@@ -587,12 +617,55 @@ const Main = () => {
                         <div className={classes.reviewsWrapper}>
                             <Button className={classes.reviewButton}>
                                 <div className={classes.reviewStarWrapper}>
-                                    <Typography className={classes.reviewHeader}>Grateful for a Review</Typography>
+                                    <Typography className={classes.reviewHeader}>We'd Love to Hear From You</Typography>
+                                    <Typography className={classes.reviewClickText}>Click here to leave us a review</Typography>
                                         <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
-                                                <StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/>
+                                                <FiveStar/>
                                         </a>
                                 </div>
                             </Button> 
+                        </div>
+                        <div className={classes.reviewCardsWrapper}>
+                        <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"<b>You're the BEST!!</b> Thank you for going <b>above and beyond</b>. All your extra efforts are greatly appreciated."</i> - Ann Casey</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thank you for fixing my hot tub. You work the magic when it comes to <b>spas</b>."</i> - Beth Delplato</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thank you so much for all your hard work putting in our <b>pool liner</b>! We really appreciate you guys getting this done for us before the arrival of our baby girl! The liner looks <b>fantastic!</b> Thank you again for everything!!!"</i> - Mandy & Brian Nasche</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thank you - the <b>liner</b> looks great! See you in the fall!"</i> - Patty Herrington </Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thanks so much for the <b>great service</b>. We are enjoying our hot tub <b>now</b>!!! We appreciate the quality workmanship and such knowledge!"</i> - Jim & Erika Roggow</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thank you for always <b>taking such great care of us!</b> We appreciate it more than you know."</i> - Jill Bishop</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"I just wanted to let you know how much we appreciated your expertise, kindness, your understanding and your patience. As you know - I've had some very difficult and negative project experiences. <b>You were the BEST!</b> You were genuine and so helpful throughout this whole process"</i> - Kathy & Eddie Wiecorek</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Thanks so much! <b>It looks fantastic</b> and if anybody can get that darn pool light to work it's you guys"</i> - Jeff & Michele Clark</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"<b>You're the BEST!</b> I just so appreciate the healing comfort of our hot tub. <b>Thank you for making it possible!</b>"</i> - Joan Haviland</Typography>
+                            </Card>
+                            <Card className={classes.reviewCard}>
+                               <FiveStar/>
+                               <Typography className={classes.reviewCardText}><i>"Paul & Kathy - Thanks again for the <b>special service</b>"</i> - Loiue Carusone</Typography>
+                            </Card>
                         </div>
                     </div>
                 </div>
