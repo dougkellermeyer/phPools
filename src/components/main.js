@@ -311,7 +311,8 @@ const withStyles = makeStyles(() => ({
     reviewButton: {
         backgroundColor: "#b8d1ed",
         borderRadius: "25px",
-        padding: "20px"
+        padding: "20px",
+        marginBottom: "20px"
     },
     reviewHeader: {
         fontSize: "1.2rem",
