@@ -625,9 +625,6 @@ const Main = () => {
                                         </a>
                                 </div>
                             </Button> 
-                            <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
-                                                Click here!<FiveStar/>
-                                        </a>
                         </div>
                         <div className={classes.reviewCardsWrapper}>
                         <Card className={classes.reviewCard}>
