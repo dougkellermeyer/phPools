@@ -7,6 +7,11 @@ import Typography from '@material-ui/core/Typography'
 import "./layout.css"
 
 const withStyles = makeStyles(() => ({
+  "@global":{
+    p:{
+        fontFamily: "Raleway, sans-serif"
+    }
+  },
     layoutRoot: {
       display: "flex",
       flexDirection: "column"

@@ -12,6 +12,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const withStyles = makeStyles( () => ({
+  "@global":{
+    "*":{
+        fontFamily: "Raleway, sans-serif !important"
+    }
+  },
   navBarRoot: {
       position: "fixed",
       display: "flex",

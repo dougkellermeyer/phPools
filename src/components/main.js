@@ -32,6 +32,11 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 import "./main.css"
 
 const withStyles = makeStyles(() => ({
+    "@global":{
+        "*":{
+            fontFamily: "Raleway, sans-serif !important"
+        }
+    },
     mainRoot: {
         display: "flex",
         flexDirection: "column"
@@ -155,7 +160,25 @@ const withStyles = makeStyles(() => ({
         fontWeight: "100",
         fontFamily: "Raleway, sans-serif",
         textAlign: "center",
-        margin: "auto"
+        margin: "auto",
+        "@media(max-width: 600px)":{
+            display: "none"
+        }
+    },
+    landingPageSubHeaderMobile:{
+        display: "none",
+        "@media(max-width: 600px)":{
+            display: "block",
+            color: "black",
+            // background: "#3587de",
+            marginLeft: "0px",
+            marginRight: "0px",
+            fontSize: "2em",
+            fontWeight: "100",
+            fontFamily: "Raleway, sans-serif",
+            textAlign: "center",
+            margin: "auto"
+        }
     },
     serviceDivider: {
         width: "15%",
@@ -412,8 +435,9 @@ const Main = () => {
                     <div className={classes.landingWrapper}>
                         <div className={classes.landingMessageWrapper}>
                             <Typography className={classes.landingPageHeader}>PH Pool & Spa Service</Typography>
-                            <Typography className={classes.landingPageSubHeader}>Rochester's Top Choice in Pools & Spa</Typography>
-                            {/* <Typography style={{textAlign: "center"}}>Over 30 years of experience</Typography> */}
+                            <Typography className={classes.landingPageSubHeader}>Rochester's Top Choice</Typography>
+                            <Typography className={classes.landingPageSubHeaderMobile}>Rochester's</Typography>
+                            <Typography className={classes.landingPageSubHeaderMobile}>Top Choice</Typography>
                         </div>
                     </div>
                 </div>
@@ -424,7 +448,7 @@ const Main = () => {
             <span style={{paddingBottom: "80px", backgroundColor: "#1563b2"}} id="services"></span>
             <section class="py-5 section-bubble2">
                     <div class="container">
-                        <Typography className={classes.someOfWorkHeader}>Custom Renovations, Repairs, and Service</Typography>
+                        <Typography className={classes.someOfWorkHeader}>Custom Renovations, Sales and Service</Typography>
                         <Divider className={classes.serviceDivider}/>
                         <Typography className={classes.serviceSummary}>From basic maintenance to complete pool renovations, we have you covered.</Typography>
                         <div className={classes.servicesBulletsWrapper}>
@@ -466,7 +490,7 @@ const Main = () => {
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={linerFlower} alt="pool liner"/>
-                                    <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography>
+                                    {/* <Typography className={classes.servicesCardText}>Custom Pool Liners by PH</Typography> */}
                                 </CardContent>
                             </Card>  
                             <Card className={classes.servicesCard}>
@@ -478,7 +502,7 @@ const Main = () => {
                             <Card className={classes.servicesCard}>
                                 <CardContent className={classes.servicesCardContent}>
                                     <img className={classes.servicesCardImage} src={liner1} alt="pool liner install"/>
-                                    <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography>
+                                    {/* <Typography className={classes.servicesCardText}>Major Pool Renovation</Typography> */}
                                 </CardContent>
                             </Card>  
                             <Card className={classes.servicesCard}>
@@ -520,7 +544,7 @@ const Main = () => {
                             <div className={classes.aboutSectionWrapper}>
                                 <Typography className={classes.aboutTitleHeader}>About Us</Typography>
                                 <div className={classes.aboutTextWrapper}>
-                                    <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester area since 1989.</p>
+                                    <p className={classes.aboutText}>PH Pool & Spa Service has been serving the Rochester and surrounding areas since 1989.</p>
                                     <p className={classes.aboutText}>We specialize in liner replacement for inground pools, but also offer service, renovation and repair for inground pools and spas of all types and sizes.</p>
                                     <p className={classes.aboutText}>Our highly trained and experienced staff members strive to deliver the highest quality work.</p>
                                     <p className={classes.aboutText}>Call the proven professionals today...we’ll leave you wondering why you didn’t call sooner.</p>
@@ -563,7 +587,7 @@ const Main = () => {
                         <div className={classes.reviewsWrapper}>
                             <Button className={classes.reviewButton}>
                                 <div className={classes.reviewStarWrapper}>
-                                    <Typography className={classes.reviewHeader}>Leave Us a Review</Typography>
+                                    <Typography className={classes.reviewHeader}>Grateful for a Review</Typography>
                                         <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
                                                 <StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/><StarRateIcon/>
                                         </a>
