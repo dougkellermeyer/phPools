@@ -251,7 +251,7 @@ const withStyles = makeStyles(() => ({
     },
     servicesCardText: {
         position: "absolute",
-        top: "50%",
+        top: "80%",
         left: "50%",
         transform: "translate(-50%, -50%)",
         fontSize: "1.5rem",
@@ -328,7 +328,7 @@ const withStyles = makeStyles(() => ({
         flexDirection: "column"
     },
     reviewLink: {   
-        color: "yellow"
+        textDecoration:"none"
     },
     reviewCard: {
         display: "flex",
@@ -616,15 +616,20 @@ const Main = () => {
                             </a>
                         </div>
                         <div className={classes.reviewsWrapper}>
-                            <Button className={classes.reviewButton}>
-                                <div className={classes.reviewStarWrapper}>
-                                    <Typography className={classes.reviewHeader}>We'd Love to Hear From You</Typography>
-                                    <Typography className={classes.reviewClickText}>Click here to leave us a review</Typography>
-                                        <a className={classes.reviewLink} href="https://g.page/PHpools/review?rc" target="_blank">
-                                                <FiveStar/>
-                                        </a>
-                                </div>
-                            </Button> 
+                            <a className={classes.reviewLink}
+                                href="https://g.page/PHpools/review?rc" 
+                                target="_blank"
+                            >
+                                <Button 
+                                    className={classes.reviewButton}
+                                >
+                                    <div className={classes.reviewStarWrapper}>
+                                        <Typography className={classes.reviewHeader}>We'd Love to Hear From You</Typography>
+                                        <Typography className={classes.reviewClickText}>Click here to leave us a review</Typography>
+                                        <FiveStar/>
+                                    </div>
+                                </Button> 
+                            </a>
                         </div>
                         <div className={classes.reviewCardsWrapper}>
                         <Card className={classes.reviewCard}>
@@ -637,7 +642,7 @@ const Main = () => {
                             </Card>
                             <Card className={classes.reviewCard}>
                                <FiveStar/>
-                               <Typography className={classes.reviewCardText}><i>"Thank you so much for all your hard work putting in our <b>pool liner</b>! We really appreciate you guys getting this done for us before the arrival of our baby girl! The liner looks <b>fantastic!</b> Thank you again for everything!!!"</i> - Mandy & Brian Nasche</Typography>
+                               <Typography className={classes.reviewCardText}><i>"Thank you so much for all your hard work putting in our <b>pool liner</b>! We really appreciate you guys getting this done for us before the arrival of our baby girl! The liner looks <b>fantastic!</b> Thank you again for everything!!!"</i> - Mandy & Brian Nitsche</Typography>
                             </Card>
                             <Card className={classes.reviewCard}>
                                <FiveStar/>
@@ -657,7 +662,7 @@ const Main = () => {
                             </Card>
                             <Card className={classes.reviewCard}>
                                <FiveStar/>
-                               <Typography className={classes.reviewCardText}><i>"Thanks so much! <b>It looks fantastic</b> and if anybody can get that darn pool light to work it's you guys"</i> - Jeff & Michele Clark</Typography>
+                               <Typography className={classes.reviewCardText}><i>"Thanks so much! <b>It looks fantastic</b> and if anybody can get that darn pool light to work it's you guys"</i> - The Clarks</Typography>
                             </Card>
                             <Card className={classes.reviewCard}>
                                <FiveStar/>
@@ -665,7 +670,7 @@ const Main = () => {
                             </Card>
                             <Card className={classes.reviewCard}>
                                <FiveStar/>
-                               <Typography className={classes.reviewCardText}><i>"Paul & Kathy - Thanks again for the <b>special service</b>"</i> - Loiue Carusone</Typography>
+                               <Typography className={classes.reviewCardText}><i>"Paul & Kathy - Thanks again for the <b>special service</b>"</i> - Louie & B Carusone</Typography>
                             </Card>
                         </div>
                     </div>
