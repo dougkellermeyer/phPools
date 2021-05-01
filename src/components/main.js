@@ -14,7 +14,7 @@ import liner4 from '../images/ph_liner_2_river.jpeg'
 import liner5 from '../images/liner_install_1.jpeg'
 import liner6 from '../images/liner6.jpeg'
 import linerFlower from '../images/liner_flower.jpg'
-import bbbLogo from '../images/bbb_logo_a_rating_2.png'
+import bbbLogo from '../images/AB-seal-horz.svg'
 import poolVacuum from '../images/pool_cleaning.jpg'
 import poolPump from '../images/pool_pump.jpg'
 import poolEquipmentSales from '../images/poolEquipmentSales.jpg'
@@ -93,7 +93,10 @@ const withStyles = makeStyles(() => ({
         display:"flex",
         flexDirection: "column",
         maxWidth: "960px",
-        margin: "20px"
+        margin: "20px",
+        "& p":{
+            opacity: "1.0"
+        }
     },
     aboutText: {
         color: "black"
@@ -362,33 +365,41 @@ const withStyles = makeStyles(() => ({
         display: "flex",
         margin: "auto",
         marginTop: "0px",
+        backgroundColor: "white",
+        borderRadius: "14px",
         "@media(max-width:600px)":{
-            flexDirection: "column"
+            flexDirection: "column",
+            marginBottom: "20px"
         }
     },
+    bbbLink: {
+        display: "flex",
+        textDecoration: "none"
+    },
     bbbImage: {
-        marginBottom: "10px",
-        marginRight: "10px",
+        margin: "5px",
+        padding: "10px",
+        minWidth: "200px",
         maxWidth: "300px",
         maxHeight: "150px",
         borderRadius: "15px"
     },
     bbbYearsCircle: {
-        width: "90px",
-        height: "90px",
-        backgroundColor: "#2b91b2",
+        width: "65px",
+        height: "65px",
+        backgroundColor: "#1f5a76",
         padding: "10px",
-        marginTop: "30px",
-        "@media(max-width: 600px)":{
-            margin: "auto",
-            marginBottom: "40px"
-        }
+        margin: "auto",
+        marginRight:"10px",
+        fontFamily: "proxima-nova, Helvetica, Arial, sans-serif",
+        borderRadius:  "14px"
     },
     bbbCirleText: {
         color: "white",
+        opacity: "1 !important",
         fontWeight: "bold",
-        width: "70%",
         textAlign: "center",
+        fontSize: "2.0rem"
     },
     phBizCardWrapper: {
         display: "flex",
@@ -585,10 +596,12 @@ const Main = () => {
                                 </div> */}
 
                                 <div className={classes.bbbWrapper}>
-                                    <img className={classes.bbbImage} src={bbbLogo} alt="better business bureau logo" />
-                                    <Avatar className={classes.bbbYearsCircle}>
-                                        <Typography className={classes.bbbCirleText}>25+ years</Typography>
-                                    </Avatar>
+                                    <a className={classes.bbbLink} href="https://www.bbb.org/us/ny/honeoye-falls/profile/pool-contractors/ph-pool-and-spa-service-0041-32357">
+                                        <img className={classes.bbbImage} src={bbbLogo} alt="better business bureau logo" />
+                                        <Avatar className={classes.bbbYearsCircle}>
+                                            <Typography className={classes.bbbCirleText}>A+</Typography>
+                                        </Avatar>
+                                    </a>
                                 </div>
                             </div>
                             <img className={classes.aboutImage} src={riverPhoto} alt="photo of a river"/>
