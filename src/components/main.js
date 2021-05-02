@@ -369,6 +369,8 @@ const withStyles = makeStyles(() => ({
         borderRadius: "14px",
         "@media(max-width:600px)":{
             flexDirection: "column",
+            justifyContent: "center",
+            height: "110px",
             marginBottom: "20px",
         }
     },
