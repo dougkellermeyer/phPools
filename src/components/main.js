@@ -370,7 +370,6 @@ const withStyles = makeStyles(() => ({
         "@media(max-width:600px)":{
             flexDirection: "column",
             marginBottom: "20px",
-            maxHeight: "130px"
         }
     },
     bbbLink: {
