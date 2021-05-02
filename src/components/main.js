@@ -375,10 +375,11 @@ const withStyles = makeStyles(() => ({
     },
     bbbLink: {
         display: "flex",
-        textDecoration: "none"
+        textDecoration: "none",
+        padding: "10px",
     },
     bbbImage: {
-        margin: "5px",
+        margin: "auto",
         padding: "10px",
         minWidth: "200px",
         maxWidth: "300px",
@@ -389,7 +390,6 @@ const withStyles = makeStyles(() => ({
         width: "65px",
         height: "65px",
         backgroundColor: "#1f5a76",
-        padding: "10px",
         margin: "auto",
         marginRight:"10px",
         fontFamily: "proxima-nova, Helvetica, Arial, sans-serif",
