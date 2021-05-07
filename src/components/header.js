@@ -139,6 +139,13 @@ const Header = ({ siteTitle }) => {
                 >
                 <ListItemText primary={"Contact Us"} />
                 </ListItem>
+                <ListItem 
+                    className={classes.drawerItem} 
+                    button
+                    onClick={() => handleClick('#contactForm')}
+                >
+                <ListItemText primary={"Reviews"} />
+                </ListItem>
             </List>
           </div>
         </Drawer>
@@ -163,6 +170,13 @@ const Header = ({ siteTitle }) => {
             
             >
               Contact Us
+            </Button>
+            <Button 
+              className={classes.navButton}
+              onClick={() => scrollTo('#contactForm')}
+            
+            >
+              Reviews
             </Button>
           </div>
       </div>

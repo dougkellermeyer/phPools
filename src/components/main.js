@@ -211,6 +211,14 @@ const withStyles = makeStyles(() => ({
         height: "80px", 
         background: "#3587de"
     },
+    scrollToServices: {
+        paddingBottom: "80px", 
+        backgroundColor: "#1563b2"
+    },
+    scrollToContact: {
+        paddingBottom: "80px",
+        backgroundColor: "#76ace7"
+    },
     servicesListWrapper: {
         display: "flex",
         flexWrap: "wrap",
@@ -489,7 +497,7 @@ const Main = () => {
                 </div>
             </section>
                     
-            <span style={{paddingBottom: "80px", backgroundColor: "#1563b2"}} id="services"></span>
+            <span className={classes.scrollToServices} id="services"></span>
             <section class="py-5 section-bubble2">
                     <div class="container">
                         <Typography className={classes.someOfWorkHeader}>Custom Renovations, Sales and Service</Typography>
@@ -612,9 +620,10 @@ const Main = () => {
                 </section>
 
             {/* </BackgroundImage> */}
+            <span className={classes.scrollToContact} id="contactForm"></span>
             <section class="py-5 section-bubble4">
                 <div class="container">
-                    <div id="contactForm">
+                    <div>
                         <Typography className={classes.contactHeader}>Contact Us</Typography>
                         <div className={classes.phoneEmailWrapper}>
                             <a href="tel:(585) 624-9870" className={classes.contactPhone}>
